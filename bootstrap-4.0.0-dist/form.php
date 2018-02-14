@@ -27,11 +27,11 @@ try {
 	$pdo->beginTransaction();
 	$sql = "INSERT INTO test (last_name, first_name) VALUES ( :last_name, :first_name)";
 	$stmh = $pdo->prepare($sql);
-	$stmh->bindValue(':last_name',$_POST['last_name'],PDO::PARAM STR );
-	$stmh->bindValue(':first_name',$_POST['first_name'],PDO::PARAM STR );
+	$stmh->bindValue(':last_name',$_POST['last_name'],PDO::PARAM_STR );
+	$stmh->bindValue(':first_name',$_POST['first_name'],PDO::PARAM_STR );
 	$stmh->execute();
 	$pdo->commit();
-	print $stmh->rowCount()." datas are inputed.<br>";
+	print $stmh->rowCount()." datas are inserted.<br>";
 }catch (PDOException $Exception){
 	$pdo->rollBack();
 	print "failed to insert new data : ".$Exception->getMessage();
