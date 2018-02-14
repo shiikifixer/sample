@@ -16,7 +16,7 @@
 
 	<body class="bg-light">
     <div class="col-md-8 ordere-md-1">
-		<h2> Hello! Mr. [<?=$_POST["first_name"];?>] [<?=$_POST["last_name"];?>] <br> </h2>
+		<h2> Hello! Mr. <?=$_POST["first_name"];?> <?=$_POST["last_name"];?> <br> </h2>
 		</div>
 
 	<?php
