@@ -7,7 +7,7 @@
 <?php
 print "Hello! Mr. ".$_POST["first_name"]." ".$_POST["last_name"]."<br>";
 print "Registered your information!";
-$db_host = "mysql:host=webapp-shiiki-mysqldbserver2.mysql.database.azure.com";
+$db_host = "webapp-shiiki-mysqldbserver2.mysql.database.azure.com";
 $db_name = "mysqldatabase57520";
 $db_user = "mysqldbuser@webapp-shiiki-mysqldbserver2";
 $db_pass = "elec2EYoh";
