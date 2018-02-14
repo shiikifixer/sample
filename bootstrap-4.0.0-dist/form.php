@@ -22,7 +22,7 @@ try {
 }catch(PDOException $Exception){
 	die('failed to connect database : '.$Exception->getMessage());
 }
-
+/*
 try {
 	$pdo->beginTransaction();
 	$sql = "INSERT INTO test (last_name, first_name) VALUES ( :last_name, :first_name)";
@@ -36,7 +36,7 @@ try {
 	$pdo->rollBack();
 	print "failed to insert new data : ".$Exception->getMessage();
 }
-
+*/
 ?>
 
 </body>
