@@ -1,11 +1,11 @@
 <html>
 <head>
-<title>php test</title>
+<title>PHP+MySQL test</title>
 </head>
 
 <body>
 <?php
-print "Hello! Mr. ".$_POST["first_name"]." ".$_POST["last_name"];
+print "Hello! Mr. ".$_POST["first_name"]." ".$_POST["last_name"]."<br>";
 print "Registered your information!";
 $db_host = "mysql:host=webapp-shiiki-mysqldbserver2.mysql.database.azure.com";
 $db_name = "mysqldatabase57520";
@@ -15,7 +15,7 @@ $db_type = "mysql";
 $dsn = "$db_type:host=$db_host;dbname=$db_name;charset=utf8";
 
 try {
-	$pdo = new PDO($dsn,$db_user,$db__pass);
+	$pdo = new PDO($dsn,$db_user,$db_pass);
 	$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
 	print"successed to connect<br>";
