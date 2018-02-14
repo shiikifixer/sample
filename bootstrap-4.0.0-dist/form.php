@@ -1,3 +1,4 @@
+// mySQLデータベース接続用プログラム
 <html>
 <head>
 <title>php test</title>
