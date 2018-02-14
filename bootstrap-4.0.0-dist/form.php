@@ -6,7 +6,7 @@
 <body>
 <?php
 print "Hello! Mr. ".$_POST["first_name"]." ".$_POST["last_name"]."<br>";
-print "Registered your information!";
+
 $db_host = "webapp-shiiki-mysqldbserver2.mysql.database.azure.com";
 $db_name = "mysqldatabase57520";
 $db_user = "mysqldbuser@webapp-shiiki-mysqldbserver2";
@@ -22,7 +22,7 @@ try {
 }catch(PDOException $Exception){
 	die('failed to connect database : '.$Exception->getMessage());
 }
-/*
+
 try {
 	$pdo->beginTransaction();
 	$sql = "INSERT INTO test (last_name, first_name) VALUES ( :last_name, :first_name)";
@@ -36,7 +36,7 @@ try {
 	$pdo->rollBack();
 	print "failed to insert new data : ".$Exception->getMessage();
 }
-*/
+
 ?>
 
 </body>
