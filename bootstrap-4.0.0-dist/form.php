@@ -30,7 +30,7 @@
 
 
 
-	$db_host = "webapp-shiiki-mysqldbserver2.mysql.database.azure.com";
+	$db_host = "wrong-webapp-shiiki-mysqldbserver2.mysql.database.azure.com";
 	$db_name = "mysqldatabase57520";
 	$db_user = "mysqldbuser@webapp-shiiki-mysqldbserver2";
 	$db_pass = "elec2EYoh";
