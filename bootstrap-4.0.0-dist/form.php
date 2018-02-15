@@ -17,7 +17,8 @@
 	<body class="bg-light">
     <div class="col-md-8 ordere-md-1">
 		<h3> Hello! Mr. <?=$_POST["first_name"];?> <?=$_POST["last_name"];?> <br> </h3>
-		<h3> Program Language <?=$_POST["exp_lang"]?> <br> </h3>
+		<h3> Program Language java <?=$_POST["exp_java"]?> <br> </h3>
+		<h3> Program Language python <?=$_POST["exp_python"]?> <br> </h3>
 		<h3> comments <?=$_POST["comments"];?> <br> </h3>
 		
 		</div>
