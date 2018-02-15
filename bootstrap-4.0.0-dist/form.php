@@ -42,7 +42,7 @@
 
 	try {
 		$pdo->beginTransaction();
-		$sql = "INSERT INTO manpowerform (last_name, first_name, email, address, addres2, country, state, zip, java, cpp, python, other, comments) VALUES ( :last_name, :first_name, :email, :address, :address2, :country, :state, :zip, :java, :cpp, :python, :other, :comments)";
+		$sql = "INSERT INTO manpowerform (last_name, first_name, email, address, address2, country, state, zip, java, cpp, python, other, comments) VALUES ( :last_name, :first_name, :email, :address, :address2, :country, :state, :zip, :java, :cpp, :python, :other, :comments)";
 		$stmh = $pdo->prepare($sql);
 		$stmh->bindValue(':last_name',$_POST['last_name'],PDO::PARAM_STR );
 		$stmh->bindValue(':first_name',$_POST['first_name'],PDO::PARAM_STR );
