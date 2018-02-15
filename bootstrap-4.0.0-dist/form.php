@@ -16,7 +16,7 @@
 
 	<body class="bg-light">
     <div class="col-md-8 ordere-md-1">
-		<h2> Hello! Mr. <?=$_POST["first_name"];?> <?=$_POST["last_name"];?> <br> </h2>
+		<h2> Hello! Mr. <?php =$_POST["first_name"];?> <?php =$_POST["last_name"];?> <br> </h2>
 		</div>
 
 	<?php
@@ -37,10 +37,10 @@
 		die(
 	?>
 		<div class="col-md-8 ordere-md-1">
-		<h2> failed to connect database : <?=$Exception->getMessage();?><br> </h2>
+		<h2> failed to connect database : <br> </h2>
 		</div>
-<?
-		);}
+<?php
+		$Exception->getMessage());}
 
 	try {
 		$pdo->beginTransaction();
