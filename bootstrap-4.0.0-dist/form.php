@@ -39,7 +39,7 @@
 		<div class="col-md-8 ordere-md-1">
 		<h2> failed to connect database : <br> </h2>
 		</div>
-	<?php
+<?php
 	}
 
 	try {
