@@ -20,8 +20,17 @@
 		</div>
 
 	<?php
+	function reigai(){
+?>
+	<div class="col-md-8 ordere-md-1">
+	<h2> failed to connect database : <br> </h2>
+	</div>
+<?php
+	}
 
-	$db_host = "wrong-webapp-shiiki-mysqldbserver2.mysql.database.azure.com";
+
+
+	$db_host = "webapp-shiiki-mysqldbserver2.mysql.database.azure.com";
 	$db_name = "mysqldatabase57520";
 	$db_user = "mysqldbuser@webapp-shiiki-mysqldbserver2";
 	$db_pass = "elec2EYoh";
@@ -35,11 +44,14 @@
 		print"successed to connect<br>";
 	}catch(PDOException $Exception){
 		die();
-	?>
-		<!-- <div class="col-md-8 ordere-md-1"> -->
+		reigai();
+?>
+<!--
+		<div class="col-md-8 ordere-md-1">
 		<h2> failed to connect database : <br> </h2>
-		<!-- </div> -->
-<?php
+		</div>
+-->
+	<?php
 	}
 
 	try {
