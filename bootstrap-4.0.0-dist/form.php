@@ -34,13 +34,13 @@
 		$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
 		print"successed to connect<br>";
 	}catch(PDOException $Exception){
-		die(
+		die();
 	?>
 		<div class="col-md-8 ordere-md-1">
 		<h2> failed to connect database : <br> </h2>
 		</div>
 <?php
-		$Exception->getMessage());}
+		$Exception->getMessage()}
 
 	try {
 		$pdo->beginTransaction();
