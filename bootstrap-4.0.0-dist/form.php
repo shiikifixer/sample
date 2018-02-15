@@ -20,7 +20,6 @@
 		</div>
 
 	<?php
-	print "Hello! Mr. ".$_POST["first_name"]." ".$_POST["last_name"]."<br>";
 
 	$db_host = "webapp-shiiki-mysqldbserver2.mysql.database.azure.com";
 	$db_name = "mysqldatabase57520";
@@ -35,8 +34,13 @@
 		$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
 		print"successed to connect<br>";
 	}catch(PDOException $Exception){
-		die('failed to connect database : '.$Exception->getMessage());
-	}
+		die(
+	?>
+		<div class="col-md-8 ordere-md-1">
+		<h2> failed to connect database : <?=$Exception->getMessage();?><br> </h2>
+		</div>
+<?
+		);}
 
 	try {
 		$pdo->beginTransaction();
