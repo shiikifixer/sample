@@ -42,7 +42,7 @@
 
 	try {
 		$pdo->beginTransaction();
-		$sql = "INSERT INTO test (last_name, first_name, email, address, addres2, country, state, zip) VALUES ( :last_name, :first_name, :email, :address, :address2, :country, :state, :zip)";
+		$sql = "INSERT INTO manpowerform (last_name, first_name, email, address, addres2, country, state, zip, java, cpp, python, other, comments) VALUES ( :last_name, :first_name, :email, :address, :address2, :country, :state, :zip, :java, :cpp, :python, :other, :comments)";
 		$stmh = $pdo->prepare($sql);
 		$stmh->bindValue(':last_name',$_POST['last_name'],PDO::PARAM_STR );
 		$stmh->bindValue(':first_name',$_POST['first_name'],PDO::PARAM_STR );
@@ -52,6 +52,11 @@
 		$stmh->bindValue(':country',$_POST['country'],PDO::PARAM_STR );
 		$stmh->bindValue(':state',$_POST['state'],PDO::PARAM_STR );
 		$stmh->bindValue(':zip',$_POST['zip'],PDO::PARAM_STR );
+		$stmh->bindValue(':java',$_POST['exp_java'],PDO::PARAM_STR );
+		$stmh->bindValue(':cpp',$_POST['exp_cpp'],PDO::PARAM_STR );
+		$stmh->bindValue(':python',$_POST['exp_python'],PDO::PARAM_STR );
+		$stmh->bindValue(':other',$_POST['exp_other'],PDO::PARAM_STR );
+		$stmh->bindValue(':comments',$_POST['comments'],PDO::PARAM_STR );
 		$stmh->execute();
 		$pdo->commit();
 		print $stmh->rowCount()." datas are inserted.<br>";
