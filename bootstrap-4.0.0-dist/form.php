@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" contet="text/html;charset=UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>PHP+MySQL test</title>
@@ -16,11 +16,8 @@
 
 	<body class="bg-light">
     <div class="col-md-8 ordere-md-1">
-		<h3> Hello! Mr. <?=$_POST["first_name"];?> <?=$_POST["last_name"];?> <br> </h3>
-		<h3> Program Language java <?=$_POST["exp_java"]?> <br> </h3>
-		<h3> Program Language python <?=$_POST["exp_python"]?> <br> </h3>
-		<h3> comments <?=$_POST["comments"];?> <br> </h3>
-		
+			<h3> Hello! Mr. <?=$_POST["first_name"];?> <?=$_POST["last_name"];?> <br> </h3>
+			<h3> Bilingual Resource <?=$_POST["bilingual_resource"]?> <br> </h3>		
 		</div>
 
 	<?php
@@ -42,21 +39,21 @@
 
 	try {
 		$pdo->beginTransaction();
-		$sql = "INSERT INTO manpowerform (last_name, first_name, email, address, address2, country, state, zip, java, cpp, python, other, comments) VALUES ( :last_name, :first_name, :email, :address, :address2, :country, :state, :zip, :java, :cpp, :python, :other, :comments)";
+		$sql = "INSERT INTO manpowerform (last_name, first_name, email, fixer_project, fixer_department, client_company, client_point, client_contact, project_title, project_description, project_scope, bilingual_resource, project_kickoff) VALUES ( :last_name, :first_name, :email, :fixer_project, :fixer_department, :client_company, :client_point, :client_contact, :project_title, :project_description, :project_scope, :bilingual_resource, :project_kickoff)";
 		$stmh = $pdo->prepare($sql);
 		$stmh->bindValue(':last_name',$_POST['last_name'],PDO::PARAM_STR );
 		$stmh->bindValue(':first_name',$_POST['first_name'],PDO::PARAM_STR );
 		$stmh->bindValue(':email',$_POST['email'],PDO::PARAM_STR );
-		$stmh->bindValue(':address',$_POST['address'],PDO::PARAM_STR );
-		$stmh->bindValue(':address2',$_POST['address2'],PDO::PARAM_STR );
-		$stmh->bindValue(':country',$_POST['country'],PDO::PARAM_STR );
-		$stmh->bindValue(':state',$_POST['state'],PDO::PARAM_STR );
-		$stmh->bindValue(':zip',$_POST['zip'],PDO::PARAM_STR );
-		$stmh->bindValue(':java',$_POST['exp_java'],PDO::PARAM_STR );
-		$stmh->bindValue(':cpp',$_POST['exp_cpp'],PDO::PARAM_STR );
-		$stmh->bindValue(':python',$_POST['exp_python'],PDO::PARAM_STR );
-		$stmh->bindValue(':other',$_POST['exp_other'],PDO::PARAM_STR );
-		$stmh->bindValue(':comments',$_POST['comments'],PDO::PARAM_STR );
+		$stmh->bindValue(':fixer_project',$_POST['fixer_project'],PDO::PARAM_STR );
+		$stmh->bindValue(':fixer_department',$_POST['fixer_department'],PDO::PARAM_STR );
+		$stmh->bindValue(':client_company',$_POST['client_company'],PDO::PARAM_STR );
+		$stmh->bindValue(':client_point',$_POST['client_point'],PDO::PARAM_STR );
+		$stmh->bindValue(':client_contact',$_POST['client_contact'],PDO::PARAM_STR );
+		$stmh->bindValue(':project_title',$_POST['project_title'],PDO::PARAM_STR );
+		$stmh->bindValue(':project_description',$_POST['project_description'],PDO::PARAM_STR );
+		$stmh->bindValue(':project_scope',$_POST['project_scope'],PDO::PARAM_STR );
+		$stmh->bindValue(':bilingual_resource',$_POST['bilingual_resource'],PDO::PARAM_STR );
+		$stmh->bindValue(':project_kickoff',$_POST['project_kickoff'],PDO::PARAM_STR );
 		$stmh->execute();
 		$pdo->commit();
 		print $stmh->rowCount()." datas are inserted.<br>";
