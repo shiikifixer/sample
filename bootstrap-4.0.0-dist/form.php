@@ -39,7 +39,7 @@
 
 	try {
 		$pdo->beginTransaction();
-		$sql = "INSERT INTO manpowerform (last_name, first_name, email, fixer_project, fixer_department, client_company, client_point, client_contact, project_title, project_description, project_scope, bilingual_resource, project_kickoff, project_deadline, flexible_deadline, html, react, angular, jquery, bootstrap, sass, json, ajax, other_frontend) VALUES ( :last_name, :first_name, :email, :fixer_project, :fixer_department, :client_company, :client_point, :client_contact, :project_title, :project_description, :project_scope, :bilingual_resource, :project_kickoff, :project_deadline, :flexible_deadline, :html, :react, :angular, :jquery, :bootstrap, :sass, :json, :ajax, :other_frontend)";
+		$sql = "INSERT INTO manpowerform (last_name, first_name, email, fixer_project, fixer_department, client_company, client_point, client_contact, project_title, project_description, project_scope, bilingual_resource, project_kickoff, project_deadline, flexible_deadline, html, react, angular, jquery, bootstrap, sass, json, ajax, other_frontend, frontend_technologies, cloud_platform) VALUES ( :last_name, :first_name, :email, :fixer_project, :fixer_department, :client_company, :client_point, :client_contact, :project_title, :project_description, :project_scope, :bilingual_resource, :project_kickoff, :project_deadline, :flexible_deadline, :html, :react, :angular, :jquery, :bootstrap, :sass, :json, :ajax, :other_frontend, :frontend_technologies, :cloud_platform)";
 		$stmh = $pdo->prepare($sql);
 		$stmh->bindValue(':last_name',$_POST['last_name'],PDO::PARAM_STR );
 		$stmh->bindValue(':first_name',$_POST['first_name'],PDO::PARAM_STR );
@@ -65,6 +65,8 @@
 		$stmh->bindValue(':json',$_POST['json'],PDO::PARAM_STR );
 		$stmh->bindValue(':ajax',$_POST['ajax'],PDO::PARAM_STR );
 		$stmh->bindValue(':other_frontend',$_POST['other_frontend'],PDO::PARAM_STR );
+		$stmh->bindValue(':frontend_technologies',$_POST['frontend_technologies'],PDO::PARAM_STR );
+		$stmh->bindValue(':cloud_platform',$_POST['cloud_platform'],PDO::PARAM_STR );
 		$stmh->execute();
 		$pdo->commit();
 		print $stmh->rowCount()." datas are inserted.<br>";
