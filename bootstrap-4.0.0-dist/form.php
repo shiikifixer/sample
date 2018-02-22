@@ -39,7 +39,7 @@
 
 	try {
 		$pdo->beginTransaction();
-		$sql = "INSERT INTO manpowerform (last_name, first_name, email, fixer_project, fixer_department, client_company, client_point, client_contact, project_title, project_description, project_scope, bilingual_resource, project_kickoff) VALUES ( :last_name, :first_name, :email, :fixer_project, :fixer_department, :client_company, :client_point, :client_contact, :project_title, :project_description, :project_scope, :bilingual_resource, :project_kickoff)";
+		$sql = "INSERT INTO manpowerform (last_name, first_name, email, fixer_project, fixer_department, client_company, client_point, client_contact, project_title, project_description, project_scope, bilingual_resource, project_kickoff, project_deadline, flexible_deadline, html, react, angular, jquery, bootstrap, sass, json, ajax, other_frontend) VALUES ( :last_name, :first_name, :email, :fixer_project, :fixer_department, :client_company, :client_point, :client_contact, :project_title, :project_description, :project_scope, :bilingual_resource, :project_kickoff, :project_deadline, :flexible_deadline, :html, :react, :angular, :jquery, :bootstrap, :sass, :json, :ajax, :other_frontend)";
 		$stmh = $pdo->prepare($sql);
 		$stmh->bindValue(':last_name',$_POST['last_name'],PDO::PARAM_STR );
 		$stmh->bindValue(':first_name',$_POST['first_name'],PDO::PARAM_STR );
@@ -54,6 +54,17 @@
 		$stmh->bindValue(':project_scope',$_POST['project_scope'],PDO::PARAM_STR );
 		$stmh->bindValue(':bilingual_resource',$_POST['bilingual_resource'],PDO::PARAM_STR );
 		$stmh->bindValue(':project_kickoff',$_POST['project_kickoff'],PDO::PARAM_STR );
+		$stmh->bindValue(':project_deadline',$_POST['project_deadline'],PDO::PARAM_STR );
+		$stmh->bindValue(':flexible_deadline',$_POST['flexible_deadline'],PDO::PARAM_STR );
+		$stmh->bindValue(':html',$_POST['html'],PDO::PARAM_STR );
+		$stmh->bindValue(':react',$_POST['react'],PDO::PARAM_STR );
+		$stmh->bindValue(':angular',$_POST['angular'],PDO::PARAM_STR );
+		$stmh->bindValue(':jquery',$_POST['jquery'],PDO::PARAM_STR );
+		$stmh->bindValue(':bootstrap',$_POST['bootstrap'],PDO::PARAM_STR );
+		$stmh->bindValue(':sass',$_POST['sass'],PDO::PARAM_STR );
+		$stmh->bindValue(':json',$_POST['json'],PDO::PARAM_STR );
+		$stmh->bindValue(':ajax',$_POST['ajax'],PDO::PARAM_STR );
+		$stmh->bindValue(':other_frontend',$_POST['other_frontend'],PDO::PARAM_STR );
 		$stmh->execute();
 		$pdo->commit();
 		print $stmh->rowCount()." datas are inserted.<br>";

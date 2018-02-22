@@ -11,7 +11,7 @@
 	  <link href="form-validation.css" rel="stylesheet">
    	<!-- import jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- ikmport Bootstrap -->
+    <!-- import Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
   </head>
 
@@ -54,54 +54,54 @@
 					<h4 class="mb-3">Advanced Information</h4>
 					<div class="mb-3">
 						<label for="fixer_project">Fixer Project/Owner<br><span class="text-muted">Fixerのプロジェクト/管理者</span></label>
-						<input type="text" class="form-control" id="fixer_project" placeholder="" required name="fixer_project">
+						<input type="text" class="form-control" id="fixer_project" placeholder="" name="fixer_project">
 					</div>
 					<div class="mb-3">
 						<label for="fixer_department">Fixer department<br><span class="text-muted">Fixerの部署</span></label>
-						<input type="text" class="form-control" id="fixer_department" placeholder="" required name="fixer_department">
+						<input type="text" class="form-control" id="fixer_department" placeholder="" name="fixer_department">
 					</div>
 					<div class="mb-3">
 						<label for="client_company">Client company name<br><span class="text-muted">クライアント会社の名前</span></label>
-						<input type="text" class="form-control" id="client_company" placeholder="" required name="client_company">
+						<input type="text" class="form-control" id="client_company" placeholder="" name="client_company">
 					</div>
 					<div class="mb-3">
 						<label for="client_point">Client point of contact person<br><span class="text-muted">クライアントの担当者</span></label>
-						<input type="text" class="form-control" id="client_point" placeholder="" required name="client_point">
+						<input type="text" class="form-control" id="client_point" placeholder="" name="client_point">
 					</div>
 					<div class="mb-3">
 						<label for="client_contact">Client contact details (IM/phone)<br><span class="text-muted">クライアントとのコンタクト方法</span></label>
-						<input type="text" class="form-control" id="client_contact" placeholder="" required name="client_contact">
+						<input type="text" class="form-control" id="client_contact" placeholder="" name="client_contact">
 					</div>
 					<div class="mb-3">
 						<label for="project_title">Project title<br><span class="text-muted">プロジェクトタイトル</span></label>
-						<input type="text" class="form-control" id="project_title" placeholder="" required name="project_title">
+						<input type="text" class="form-control" id="project_title" placeholder="" name="project_title">
 					</div>
 					<div class="mb-3">
 						<label for="project_description">Project description<br><span class="text-muted">プロジェクトの詳細</span></label>
-						<textarea type="text" class="form-control" id="project_description" rows="4" placeholder="" required name="project_description"></textarea>
+						<textarea type="text" class="form-control" id="project_description" rows="4" placeholder="" name="project_description"></textarea>
 					</div>
 					<div class="mb-3">
 						<label for="project_scope">Project scope<br><span class="text-muted">プロジェクトの展望</span></label>
-						<textarea type="text" class="form-control" id="project_scope" rows="4" placeholder="" required name="project_scope"></textarea>
+						<textarea type="text" class="form-control" id="project_scope" rows="4" placeholder="" name="project_scope"></textarea>
 					</div>
 					<div class="mb-3">
 						<label for="bilingual_resource">Bilingual resource needed?<br><span class="text-muted">バイリンガル人材は必要か?</span></label>
 						<select class="custom-select" name="bilingual_resource">
-							<option selected value="bilingual_resource_no">No</option>
-							<option value="bilingual_resource_yes">Yes</option>
+							<option selected value="no">No</option>
+							<option value="yes">Yes</option>
 						</select>
 					</div>
 					<div class="mb-3">
 						<label for="project_kickoff">Project expected kick off<br><span class="text-muted">プロジェクトの開始予定日</span></label>
-						<input type="text" class="form-control" id="project_kickoff" placeholder="2018/01/01" required name="project_kickoff">
+						<input type="text" class="form-control" id="project_kickoff" placeholder="2018/01/01" name="project_kickoff">
 					</div>
 					<div class="mb-3">
 						<label for="project_deadline">Project expected deadline<br><span class="text-muted">プロジェクトの終了予定日</span></label>
-						<input type="text" class="form-control" id="project_deadline" placeholder="2018/01/01" required name="project_deadline">
+						<input type="text" class="form-control" id="project_deadline" placeholder="2018/01/01" name="project_deadline">
 					</div>
 					<div class="mb-3">
 						<label for="flexible_deadline">Flexible deadline<br><span class="text-muted">締め切りは変更可能か</span></label>
-						<select class="custom-select">
+						<select class="custom-select" name="flexible_deadline">
 							<option selected value="flexible_deadline_no">No</option>
 							<option value="flexible_deadline_yes">Yes</option>
 						</select>
@@ -109,40 +109,40 @@
 					<div class="mb-3">
 						<label for="frontend_technologies">Frontend technologies<br><span class="text-muted">フロントエンド技術</span></label>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1" id="frontend_technologies_html">
-							<label class="form-check-label" for="frontend_technologies_html">HTML / JavaScript / CSS</label>
+							<input class="form-check-input" type="checkbox" value="1" name="html">
+							<label class="form-check-label" for="html">HTML / JavaScript / CSS</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1" id="frontend_technologies_react">
-							<label class="form-check-label" for="frontend_technologies_react">React</label>
+							<input class="form-check-input" type="checkbox" value="1" name="react">
+							<label class="form-check-label" for="react">React</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1" id="frontend_technologies_angular">
-							<label class="form-check-label" for="frontend_technologies_angular">Angular</label>
+							<input class="form-check-input" type="checkbox" value="1" name="angular">
+							<label class="form-check-label" for="angular">Angular</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1" id="frontend_technologies_jquery">
-							<label class="form-check-label" for="frontend_technologies_jquery">JQery</label>
+							<input class="form-check-input" type="checkbox" value="1" name="jquery">
+							<label class="form-check-label" for="jquery">JQery</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1" id="frontend_technologies_bootstrap">
-							<label class="form-check-label" for="frontend_technologies_bootstrap">Bootstrap</label>
+							<input class="form-check-input" type="checkbox" value="1" name="bootstrap">
+							<label class="form-check-label" for="bootstrap">Bootstrap</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1" id="frontend_technologies_sass">
-							<label class="form-check-label" for="frontend_technologies_sass">Sass</label>
+							<input class="form-check-input" type="checkbox" value="1" name="sass">
+							<label class="form-check-label" for="sass">Sass</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1" id="frontend_technologies_json">
-							<label class="form-check-label" for="frontend_technologies_json">Json</label>
+							<input class="form-check-input" type="checkbox" value="1" name="json">
+							<label class="form-check-label" for="json">Json</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1" id="frontend_technologies_ajax">
-							<label class="form-check-label" for="frontend_technologies_ajax">Ajax</label>
+							<input class="form-check-input" type="checkbox" value="1" name="ajax">
+							<label class="form-check-label" for="ajax">Ajax</label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1" id="frontend_technologies_other">
-							<label class="form-check-label" for="frontend_technologies_other">other</label>
+							<input class="form-check-input" type="checkbox" value="1" name="other_frontend">
+							<label class="form-check-label" for="other_frontend">Other</label>
 						</div>
 						<input type="text" class="form-control" id="frontend_technologies" placeholder="write other technologies" name="frontend_technologies">
 					</div>
@@ -272,7 +272,7 @@
 					</div>
 					<div class="mb-3">
 						<label for="other_requirements">Other requirements<br><span class="text-muted">他の要求</span></label>
-						<input type="text" class="form-control" id="os_requirements" placeholder="" required name="os_requirements">
+						<input type="text" class="form-control" id="os_requirements" placeholder="" name="os_requirements">
 					</div>
 					<div class="mb-3">
 						<label for="github_account">Github account required<br><span class="text-muted">Githubアカウントの要求</span></label>
@@ -289,7 +289,7 @@
 						</select>
 					</div>
 					<div class="mb-3">
-						<label for="management_engineer">Will you include the engineer in any project management tools to communicate with other members?<br><span class="text-muted">締め切りは変更可能か</span></label>
+						<label for="management_engineer">Will you include the engineer in any project management tools to communicate with other members?<br><span class="text-muted">他のメンバとコミュニケーションするためのあらゆるプロジェクト管理ツールを扱える技術者を加えたいですか?</span></label>
 						<select class="custom-select">
 							<option selected value="management_engineer_no">No</option>
 							<option value="management_engineer_yes">Yes</option>
@@ -309,15 +309,15 @@
 					</div>
 					<div class="mb-3">
 						<label for="security_compliance">Application security compliance specifics<br><span class="text-muted">アプリケーションセキュリティコンプライアンスの詳細</span></label>
-						<textarea type="text" class="form-control" id="security_compliance"rows="4" placeholder="" required name="security_compliance"></textarea>
+						<textarea type="text" class="form-control" id="security_compliance"rows="4" placeholder="" name="security_compliance"></textarea>
 					</div>
 					<div class="mb-3">
 						<label for="other_risks">Any other specific risks / assumptions<br><span class="text-muted">他の特定のリスクや想定</span></label>
-						<input type="text" class="form-control" id="other_risks" placeholder="" required name="other_risks">
+						<input type="text" class="form-control" id="other_risks" placeholder="" name="other_risks">
 					</div>
 					<div class="mb-3">
 						<label for="link_documents">Links to external documents to share<br><span class="text-muted">共有する外部ドキュメントとのリンク</span></label>
-						<textarea type="text" class="form-control" id="other_risks" rows="3" placeholder="" required name="other_risks"></textarea>
+						<textarea type="text" class="form-control" id="other_risks" rows="3" placeholder="" name="other_risks"></textarea>
 					</div>
 					<div class="mb-3">
 						<label for="project_incentives">Project incentives may be applied depending on perormance result<br><span class="text-muted">プロジェクトへのやる気はパフォーマンス結果によって影響されうる</span></label>
