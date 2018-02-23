@@ -39,7 +39,7 @@
 
 	try {
 		$pdo->beginTransaction();
-		$sql = "INSERT INTO manpowerform (last_name, first_name, email, fixer_project, fixer_department, client_company, client_point, client_contact, project_title, project_description, project_scope, bilingual_resource, project_kickoff, project_deadline, flexible_deadline, html, react, angular, jquery, bootstrap, sass, json) VALUES ( :last_name, :first_name, :email, :fixer_project, :fixer_department, :client_company, :client_point, :client_contact, :project_title, :project_description, :project_scope, :bilingual_resource, :project_kickoff, :project_deadline, :flexible_deadline, :html, :react, :angular, :jquery, :bootstrap, :sass, :json)";
+		$sql = "INSERT INTO manpowerform (last_name, first_name, email, fixer_project, fixer_department, client_company, client_point, client_contact, project_title, project_description, project_scope, bilingual_resource, project_kickoff, project_deadline, flexible_deadline, html, react, angular, jquery, bootstrap, sass, json, ajax, other_frontend, frontend_technologies, cloud_platform, other_cloud, cs, java, php, nodejs, python, vbnet, ruby, other_backend, backend_technologies, specific_frameworks, mssqlserver, mysql, postgresql, mongodb, oracle, cosmosdb, other_database, database_technologies, os_requirements, other_os, other_requirements, github_account, slack_account, management_engineer, management_tool, review_status, security_compliance, other_risks, link_documents, project_incentives, comments) VALUES ( :last_name, :first_name, :email, :fixer_project, :fixer_department, :client_company, :client_point, :client_contact, :project_title, :project_description, :project_scope, :bilingual_resource, :project_kickoff, :project_deadline, :flexible_deadline, :html, :react, :angular, :jquery, :bootstrap, :sass, :json, :ajax, :other_frontend, :frontend_technologies, :cloud_platform, :other_cloud, :cs, :java, :php, :nodejs, :python, :vbnet, :ruby, :ruby, :other_backend, :backend_technologies, :specific_frameworks, :mssqlserver, :mysql, :postgresql, :mongodb, :oracle, :cosmosdb, :other_database, :database_technologies, :os_requirements, :other_os, :other_requirements, :github_account, :slack_account, :management_engineer, :management_tool, :review_status, :security_compliance, :other_risks, :link_documents, :project_incentives, :comments)";
 		$stmh = $pdo->prepare($sql);
 		$stmh->bindValue(':last_name',$_POST['last_name'],PDO::PARAM_STR );
 		$stmh->bindValue(':first_name',$_POST['first_name'],PDO::PARAM_STR );
@@ -63,7 +63,7 @@
 		$stmh->bindValue(':bootstrap',$_POST['bootstrap'],PDO::PARAM_STR );
 		$stmh->bindValue(':sass',$_POST['sass'],PDO::PARAM_STR );
 		$stmh->bindValue(':json',$_POST['json'],PDO::PARAM_STR );
-/*		$stmh->bindValue(':ajax',$_POST['ajax'],PDO::PARAM_STR );
+		$stmh->bindValue(':ajax',$_POST['ajax'],PDO::PARAM_STR );
 		$stmh->bindValue(':other_frontend',$_POST['other_frontend'],PDO::PARAM_STR );
 		$stmh->bindValue(':frontend_technologies',$_POST['frontend_technologies'],PDO::PARAM_STR );
 		$stmh->bindValue(':cloud_platform',$_POST['cloud_platform'],PDO::PARAM_STR );
@@ -78,7 +78,7 @@
 		$stmh->bindValue(':other_backend',$_POST['other_backend'],PDO::PARAM_STR );
 		$stmh->bindValue(':backend_technologies',$_POST['backend_technologies'],PDO::PARAM_STR );
 		$stmh->bindValue(':specific_frameworks',$_POST['specific_frameworks'],PDO::PARAM_STR );
-		$stmh->bindValue(':mysqlserver',$_POST['mysqlserver'],PDO::PARAM_STR );
+		$stmh->bindValue(':mssqlserver',$_POST['mssqlserver'],PDO::PARAM_STR );
 		$stmh->bindValue(':mysql',$_POST['mysql'],PDO::PARAM_STR );
 		$stmh->bindValue(':postgresql',$_POST['postgresql'],PDO::PARAM_STR );
 		$stmh->bindValue(':mongodb',$_POST['mongodb'],PDO::PARAM_STR );
@@ -98,7 +98,7 @@
 		$stmh->bindValue(':other_risks',$_POST['other_risks'],PDO::PARAM_STR );
 		$stmh->bindValue(':link_documents',$_POST['link_documets'],PDO::PARAM_STR );
 		$stmh->bindValue(':project_incentives',$_POST['project_incentives'],PDO::PARAM_STR );
-		$stmh->bindValue(':comments',$_POST['comments'],PDO::PARAM_STR );*/
+		$stmh->bindValue(':comments',$_POST['comments'],PDO::PARAM_STR );
 		$stmh->execute();
 		$pdo->commit();
 		print $stmh->rowCount()." datas are inserted.<br>";
