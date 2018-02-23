@@ -181,31 +181,31 @@
 						<label for="backend_technologies">Backend technologies<br><span class="text-muted">バックエンド技術</span></label>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="cs">
-							<label class="form-check-label" for="back_technologies_cs">C#</label>
+							<label class="form-check-label" for="cs">C#</label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="java">
-							<label class="form-check-label" for="backend_technologies_java">Java</label>
+							<label class="form-check-label" for="java">Java</label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="php">
-							<label class="form-check-label" for="backend_technologies_php">PHP</label>
+							<label class="form-check-label" for="php">PHP</label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="nodejs">
-							<label class="form-check-label" for="frontend_technologies_nodejs">Node.js</label>
+							<label class="form-check-label" for="nodejs">Node.js</label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="python">
-							<label class="form-check-label" for="backend_technologies_python">Python</label>
+							<label class="form-check-label" for="python">Python</label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="vbnet">
-							<label class="form-check-label" for="backend_technologies_vbnet">Sass</label>
+							<label class="form-check-label" for="vbnet">vbnet</label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="ruby">
-							<label class="form-check-label" for="backend_technologies_ruby">Json</label>
+							<label class="form-check-label" for="ruby">Json</label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="other_backend">
@@ -276,21 +276,21 @@
 					</div>
 					<div class="mb-3">
 						<label for="github_account">Github account required<br><span class="text-muted">Githubアカウントの要求</span></label>
-						<select class="custom-select">
+						<select class="custom-select" name="github_account">
 							<option selected value="no">No</option>
 							<option value="yes">Yes</option>
 						</select>
 					</div>
 					<div class="mb-3">
 						<label for="slack_account">Slack account required<br><span class="text-muted">Slackアカウントの要求</span></label>
-						<select class="custom-select">
+						<select class="custom-select" name="slack_account">
 							<option selected value="no">No</option>
 							<option value="yes">Yes</option>
 						</select>
 					</div>
 					<div class="mb-3">
 						<label for="management_engineer">Will you include the engineer in any project management tools to communicate with other members?<br><span class="text-muted">他のメンバとコミュニケーションするためのあらゆるプロジェクト管理ツールを扱える技術者を加えたいですか?</span></label>
-						<select class="custom-select">
+						<select class="custom-select" name="management_engineer">
 							<option selected value="no">No</option>
 							<option value="yes">Yes</option>
 						</select>
@@ -301,7 +301,7 @@
 					</div>
 					<div class="mb-3">
 						<label for="review_status">Do you want to have a regular review on the development status?<br><span class="text-muted">開発ステータスの定期的な見直しをしたいですか?</span></label>
-						<select class="custom-select">
+						<select class="custom-select" name="review_status">
 							<option selected value="no">No</option>C:\Users\shiiki.yosuke\AppData\Roaming\npm
 							<option value="yes">Yes</option>
 							<option value="maybe">Maybe</option>
@@ -321,7 +321,7 @@
 					</div>
 					<div class="mb-3">
 						<label for="project_incentives">Project incentives may be applied depending on perormance result<br><span class="text-muted">プロジェクトへのやる気はパフォーマンス結果によって影響されうる</span></label>
-						<select class="custom-select">
+						<select class="custom-select" name="project_incentives">
 							<option selected value="no">No</option>
 							<option value="yes">Yes</option>
 						</select>
