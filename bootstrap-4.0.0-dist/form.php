@@ -63,7 +63,7 @@
 		$stmh->bindValue(':bootstrap',$_POST['bootstrap'],PDO::PARAM_STR );
 		$stmh->bindValue(':sass',$_POST['sass'],PDO::PARAM_STR );
 		$stmh->bindValue(':json',$_POST['json'],PDO::PARAM_STR );
-		$stmh->bindValue(':ajax',$_POST['ajax'],PDO::PARAM_STR );
+/*		$stmh->bindValue(':ajax',$_POST['ajax'],PDO::PARAM_STR );
 		$stmh->bindValue(':other_frontend',$_POST['other_frontend'],PDO::PARAM_STR );
 		$stmh->bindValue(':frontend_technologies',$_POST['frontend_technologies'],PDO::PARAM_STR );
 		$stmh->bindValue(':cloud_platform',$_POST['cloud_platform'],PDO::PARAM_STR );
@@ -76,7 +76,7 @@
 		$stmh->bindValue(':vbnet',$_POST['vbnet'],PDO::PARAM_STR );
 		$stmh->bindValue(':ruby',$_POST['ruby'],PDO::PARAM_STR );
 		$stmh->bindValue(':other_backend',$_POST['other_backend'],PDO::PARAM_STR );
-/*		$stmh->bindValue(':backend_technologies',$_POST['backend_technologies'],PDO::PARAM_STR );
+		$stmh->bindValue(':backend_technologies',$_POST['backend_technologies'],PDO::PARAM_STR );
 		$stmh->bindValue(':specific_frameworks',$_POST['specific_frameworks'],PDO::PARAM_STR );
 		$stmh->bindValue(':mysqlserver',$_POST['mysqlserver'],PDO::PARAM_STR );
 		$stmh->bindValue(':mysql',$_POST['mysql'],PDO::PARAM_STR );
