@@ -39,7 +39,7 @@
 
 	try {
 		$pdo->beginTransaction();
-		$sql = "INSERT INTO manpowerform (last_name, first_name, email, fixer_project, fixer_department, client_company, client_point, client_contact, project_title, project_description, project_scope, bilingual_resource, project_kickoff, project_deadline, flexible_deadline, html, react, angular, jquery, bootstrap, sass, json, ajax, other_frontend, frontend_technologies, cloud_platform, other_cloud, cs, java, php, nodejs, python, vbnet, ruby, other_backend, backend_technologies, specific_frameworks, mssqlserver, mysql, postgresql, mongodb, oracle, cosmosdb, other_database, database_technologies, os_requirements, other_os, other_requirements, github_account, slack_account, management_engineer, management_tool, review_status, security_compliance, other_risks, link_documents, project_incentives, comments) VALUES ( :last_name, :first_name, :email, :fixer_project, :fixer_department, :client_company, :client_point, :client_contact, :project_title, :project_description, :project_scope, :bilingual_resource, :project_kickoff, :project_deadline, :flexible_deadline, :html, :react, :angular, :jquery, :bootstrap, :sass, :json, :ajax, :other_frontend, :frontend_technologies, :cloud_platform, :other_cloud, :cs, :java, :php, :nodejs, :python, :vbnet, :ruby, :ruby, :other_backend, :backend_technologies, :specific_frameworks, :mssqlserver, :mysql, :postgresql, :mongodb, :oracle, :cosmosdb, :other_database, :database_technologies, :os_requirements, :other_os, :other_requirements, :github_account, :slack_account, :management_engineer, :management_tool, :review_status, :security_compliance, :other_risks, :link_documents, :project_incentives, :comments)";
+		$sql = "INSERT INTO manpowerform (last_name, first_name, email, fixer_project, fixer_department, client_company, client_point, client_contact, project_title, project_description, project_scope, bilingual_resource, project_kickoff, project_deadline, flexible_deadline, html, react, angular, jquery, bootstrap, sass, json, ajax, other_frontend, frontend_technologies, cloud_platform, other_cloud) VALUES ( :last_name, :first_name, :email, :fixer_project, :fixer_department, :client_company, :client_point, :client_contact, :project_title, :project_description, :project_scope, :bilingual_resource, :project_kickoff, :project_deadline, :flexible_deadline, :html, :react, :angular, :jquery, :bootstrap, :sass, :json, :ajax, :other_frontend, :frontend_technologies, :cloud_platform, :other_cloud)";
 		$stmh = $pdo->prepare($sql);
 		$stmh->bindValue(':last_name',$_POST['last_name'],PDO::PARAM_STR );
 		$stmh->bindValue(':first_name',$_POST['first_name'],PDO::PARAM_STR );
@@ -68,7 +68,7 @@
 		$stmh->bindValue(':frontend_technologies',$_POST['frontend_technologies'],PDO::PARAM_STR );
 		$stmh->bindValue(':cloud_platform',$_POST['cloud_platform'],PDO::PARAM_STR );
 		$stmh->bindValue(':other_cloud',$_POST['other_cloud'],PDO::PARAM_STR );
-		$stmh->bindValue(':cs',$_POST['cs'],PDO::PARAM_STR );
+/*		$stmh->bindValue(':cs',$_POST['cs'],PDO::PARAM_STR );
 		$stmh->bindValue(':java',$_POST['java'],PDO::PARAM_STR );
 		$stmh->bindValue(':php',$_POST['php'],PDO::PARAM_STR );
 		$stmh->bindValue(':nodejs',$_POST['nodejs'],PDO::PARAM_STR );
@@ -98,7 +98,7 @@
 		$stmh->bindValue(':other_risks',$_POST['other_risks'],PDO::PARAM_STR );
 		$stmh->bindValue(':link_documents',$_POST['link_documets'],PDO::PARAM_STR );
 		$stmh->bindValue(':project_incentives',$_POST['project_incentives'],PDO::PARAM_STR );
-		$stmh->bindValue(':comments',$_POST['comments'],PDO::PARAM_STR );
+		$stmh->bindValue(':comments',$_POST['comments'],PDO::PARAM_STR );*/
 		$stmh->execute();
 		$pdo->commit();
 		print $stmh->rowCount()." datas are inserted.<br>";
