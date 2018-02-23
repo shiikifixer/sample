@@ -17,7 +17,6 @@
 	<body class="bg-light">
     <div class="col-md-8 ordere-md-1">
 			<h3> Hello! Mr. <?=$_POST["first_name"];?> <?=$_POST["last_name"];?> <br> </h3>
-			<h3> Bilingual Resource <?=$_POST["bilingual_resource"]?> <br> </h3>		
 		</div>
 
 	<?php
