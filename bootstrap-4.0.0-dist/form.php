@@ -76,7 +76,7 @@
 		$stmh->bindValue(':vbnet',$_POST['vbnet'],PDO::PARAM_STR );
 		$stmh->bindValue(':ruby',$_POST['ruby'],PDO::PARAM_STR );
 		$stmh->bindValue(':other_backend',$_POST['other_backend'],PDO::PARAM_STR );
-		$stmh->bindValue(':backend_technologies',$_POST['backend_technologies'],PDO::PARAM_STR );
+<!--		$stmh->bindValue(':backend_technologies',$_POST['backend_technologies'],PDO::PARAM_STR );
 		$stmh->bindValue(':specific_frameworks',$_POST['specific_frameworks'],PDO::PARAM_STR );
 		$stmh->bindValue(':mysqlserver',$_POST['mysqlserver'],PDO::PARAM_STR );
 		$stmh->bindValue(':mysql',$_POST['mysql'],PDO::PARAM_STR );
@@ -98,7 +98,7 @@
 		$stmh->bindValue(':other_risks',$_POST['other_risks'],PDO::PARAM_STR );
 		$stmh->bindValue(':link_documents',$_POST['link_documets'],PDO::PARAM_STR );
 		$stmh->bindValue(':project_incentives',$_POST['project_incentives'],PDO::PARAM_STR );
-		$stmh->bindValue(':comments',$_POST['comments'],PDO::PARAM_STR );
+		$stmh->bindValue(':comments',$_POST['comments'],PDO::PARAM_STR );-->
 		$stmh->execute();
 		$pdo->commit();
 		print $stmh->rowCount()." datas are inserted.<br>";
